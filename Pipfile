@@ -10,7 +10,8 @@ black = "==19.10b0"
 
 [packages]
 django = "==3.0.8"
-psycopg2 = "<2.9,>=2.8"
+psycopg2>"=2.8,<2.9"
+
 
 [requires]
 python_version = "3.9"
