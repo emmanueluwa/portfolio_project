@@ -1,10 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from .models import Portfolio
 
 def home_page(request):
-    return render(request, "home.html", context={})
+    projects = Portfolio.objects.all()
+
+    context = {'projects': projects}
+
+    return render(request, "home.html", context=context)
+
 
 
 def projects_page(request):
-    return render(request, "projects.html", context={})
+    projects = Portfolio.objects.all()
+
+    context = {'projects': projects}
+
+    return render(request, "projects.html", context=context)

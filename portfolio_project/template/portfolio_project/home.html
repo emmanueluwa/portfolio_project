@@ -1,1 +1,13 @@
 <h1>Home</h1>
+
+<div class="columns is-multiline">
+    {% for project in projects %}
+        <p class="title is-4">{{ project.title }}</p>
+
+        <footer class="card-footer">
+                <a href="#" class="card-footer-item">See more</a>
+        </footer>
+    {% endfor %}      
+</div>
+    
+
