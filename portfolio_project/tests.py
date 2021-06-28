@@ -10,10 +10,9 @@ from .models import Tag, Portfolio
 
 class HomePageTests(TestCase):
     def SetUp(self):
-        self.project = ProjectFactory()
+        self.portfolio = PortfolioFactory()
         self.tag = TagFactory()
         self.url = "/"
-        self.response = self.client.get(swlf.url)
         
 
     def test_landing_on_homepage(self):
@@ -27,14 +26,14 @@ class HomePageTests(TestCase):
         self.assertEqual(list(context), list(Portfolio.objects.all()))
     
 
-    def test_blank_contact_form(self):                    #testing that the context has a contact form
-        form = self.response.context["form"]
+    def test_blank_contact_form(self):       #testing that there is a contact form on the homepage
+        response = self.client.get("/")        
+        context = response.context[0:2]
 
-        self.assertEqual(self.response.status_code, 200)
-        self.assertIsInstance(form, ContactForm)
+        self.assertEqual(response.status_code, 200)
+        self.assertIsInstance(context, ContactForm)
         self.assertTemplateUsed(self.response, "/")
      
-
 
 class ProjectPageTests(TestCase):
     def SetUp(self):

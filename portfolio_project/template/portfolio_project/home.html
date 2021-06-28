@@ -1,3 +1,4 @@
+{% extends "base.html" %} {% block content %}
 <h1>Home</h1>
 
 <div class="columns is-multiline">
@@ -11,11 +12,11 @@
 
 </div>
 <div style="margin:80px">
-		<h1>Contact</h1>
-		<h4>Contact us directly if you have any questions</h4>
+		<h1>Contact form</h1>
+		<h4>Feel free to get in touch with me</h4>
 		<p>
-			Please write your name, email address and a message below if you have any questions.
-			One of our staff members will be happy to contact you directly and answer your questions as soon as possible. 
+            Please leave a subject, your message and email so I can get back to you, thank you
+            for your time :)
 		</p>
 		<form method="POST">
             {% csrf_token %}
@@ -23,5 +24,5 @@
             <button type="submit">Submit</button>
         </form>
 </div>
-    
+{% endblock content %}
 
