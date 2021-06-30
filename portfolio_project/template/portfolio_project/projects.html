@@ -1,13 +1,26 @@
 <h1>Projects</h1>
 
+<h3>
+    Below are some projects worth showing you that i have worked on so far, feel free to also view some of 
+    the smaller projects i have worked on via my <a href="">Github</a>
+</h3>
+
+
 <div class="columns is-multiline">
     {% for project in projects %}
-        <p class="title is-4">{{ project.title }}</p>
-        <p class="title is-4">{{ project.description }}</p>
-
-
-        <footer class="card-footer">
+    <div class="card">
+        <a style ="text-decoration: none; color: black;" href="/post/{{ project.id }}">
+            <p class="title is-4">{{ project.title }}</p>
+            <p class="title is-4">{{ project.description }}</p>
+            <p class="title is-4">{{ project.body|truncatewords:20 }}</p>
+            
+            
+            
+            <footer class="card-footer">
                 <a href="#" class="card-footer-item">See more</a>
-        </footer>
+            </footer>
+        </a>        
+    </div>
+
     {% endfor %}      
 </div>

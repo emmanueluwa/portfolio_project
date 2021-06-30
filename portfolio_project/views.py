@@ -50,3 +50,7 @@ def projects_page(request):
     return render(request, "projects.html", context=context)
 
 
+def post_page(request, post_id):
+    projects = Portfolio.objects.get(id=post_id)
+    context = {'projects': projects}
+    return render(request, "post.html", context=context)
