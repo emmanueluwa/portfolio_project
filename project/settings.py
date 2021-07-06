@@ -126,11 +126,26 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'portfolio_project/static/portfolio_project/'
 
-# STATICFILES_DIRS = [
-#     BASE_DIR, 'static/portfolio_project/css'
+# MEDIA_URL = 'portfolio_project/static/portfolio_project/images/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR , 'portfolio_project/static/portfolio_project/' )
+]
+
+## AWS S3, Cloudfront
+# STATIC_ROOT = [
+#     BASE_DIR , 'cdn_test' 
 # ]
+
+# MEDIA_ROOT = [
+#     BASE_DIR , 'cdn_test' 
+# ]
+
+
+
+
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"

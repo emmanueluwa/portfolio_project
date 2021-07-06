@@ -5,41 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'portfolio_project/css/main.css' %}">
+    <!-- <style id="bgimg">
+        body {
+            background-image: url("../../static/portfolio_project/images/hero-img-small.svg") 
+        }
+    </style> -->
     <title>Home</title>
 </head>
 <body>
     <nav class="nav">
-        <ul class="nav__rblock">
-            <li class="nav__menu"><a href="">Projects  </a><a href="">  Contact</a></li> 
+        <ul class="nav__lblock">
+           <li class="nav__logo"><a href=""></a>Emmanuel Portfolio</li>
+        </ul>
+        <ul class="nav__options">
+           <li class="nav__option1"><a href="">Projects</a></li>
+           <li class="nav__option2"><a href="">Home</a></li>
         </ul>
     </nav>
 
+    <div class="hero hero--bgimg" >
+        <div class="hero__wrap">       
+    <!-- <body id="hero--bgimg" style="background-image: url('{% static '../../static/portfolio_project/images/hero-img-small.svg'%}');"> -->
+            <h1>Python(Django) Developer</h1>
+            <p>Software Engineering challenges the way we think in order to solve problems, using tools, previous knowledge and
+            documentation available to us. The possiblilities with Software are pretty much endless.<br>
+            <br>
+            The freedom as well as it’s challenges are what excite me and encourage me to continue learning.</p>
+            <div class="container">
+                <div class="container__options">
+                    <div class="container__wrap">
+                        <picture class="container__picture">
+                            <source srcset="../../static/portfolio_project/images/cloud-big.jpg" media="(min-width: 700px)">
+                            <source srcset="../../static/portfolio_project/images/Cloud.jpg">
+                            <img src="../../static/portfolio_project/images/Cloud.jpg" alt="">
+                            <div class="container__name">Tool Stack</div>
+                            <ul class="container__list">
+                                <li><a href="">Python</a></li>
+                                <li><a href="">Django</a></li>
+                                <li><a href="">React</a></li>
+                                <li><a href="">HTML</a></li>
+                                <li><a href="">CSS</a></li>
+                                <li><a href="">Sass</a></li>
+                                <li><a href="">Heroku</a></li>
+                                <li><a href="">PSQL</a></li>
 
-<div class="columns is-multiline">
-    {% for project in projects %}
-        <p class="title is-4">{{ project.title }}</p>
+                            </ul>
+                        </picture>
 
-        <footer class="card-footer">
-                <a href="/post/{{ project.id }}" class="card-footer-item">See more</a>
-        </footer>
-    {% endfor %}      
+                    </div>
 
-</div>
-<div style="margin:80px">
-		<h1>Contact form</h1>
-		<h4>Feel free to get in touch with me</h4>
-		<p>
-            Please leave a subject, your message and email so I can get back to you, thank you
-            for your time :)
-		</p>
-		<form method="POST">
-            {% csrf_token %}
-            {{  form.as_p  }}
-            <button type="submit">Submit</button>
-        </form>
-</div>    
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+<footer class="footer">COPYRIGHT &copy; fulodev 2020</footer>
 </body>
 </html>
 

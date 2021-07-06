@@ -1,12 +1,54 @@
 .nav {
   display: grid;
   grid-template-columns: 1fr 1fr min-content;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(2, min-content);
 
   background-color: var(--beta);
 
-  &__rblock {
-    grid-row: 2/3;
-    grid-column: 2/3;
+  &__lblock {
+    grid-row: 1/2;
+    grid-column: 1/2;
+
+    display: flex;
+    align-items: center;
+    padding: 12rem;
+  }
+
+  &__options {
+    grid-row: 1/2;
+    grid-column: 3/4;
+
+    display: flex;
+    align-items: center;
+    padding: 12rem;
+    li {
+      margin-left: 15rem;
+    }
+  }
+
+  &__logo {
+    color: var(--delta);
+  }
+
+  &__option1 {
+    color: var(--delta);
+  }
+
+  &__option2 {
+    color: var(--delta);
+  }
+
+  @include respond-to("small") {
+    &__logo {
+      font-size: 26rem;
+    }
+
+    &__option1 {
+      font-size: 26rem;
+    }
+
+    &__option2 {
+      font-size: 26rem;
+    }
   }
 }
