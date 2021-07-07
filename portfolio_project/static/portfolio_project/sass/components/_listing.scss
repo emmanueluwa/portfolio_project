@@ -1,0 +1,30 @@
+.listing {
+  margin: 30rem 10rem;
+  background-color: var(--alert);
+
+  &__card {
+    border: 1px var(--alpha) solid;
+    background-color: var(--delta);
+    padding: 15rem;
+    border-radius: 5rem;
+    box-shadow: 1px 2px 3px 1px var(--elements);
+    margin-bottom: 20rem;
+  }
+
+  &__title {
+    align-self: center;
+    // font-size: 25rem;
+  }
+
+  // &__view {
+  //   text-align: center;
+  //   font-size: 14rem;
+  //   text-decoration: underline;
+  //   display: block;
+  //   color: var(--alpha);
+  // }
+
+  &__github {
+    color: var(--alpha);
+  }
+}

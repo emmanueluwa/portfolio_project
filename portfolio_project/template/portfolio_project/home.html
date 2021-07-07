@@ -15,17 +15,16 @@
 <body>
     <nav class="nav">
         <ul class="nav__lblock">
-           <li class="nav__logo"><a href=""></a>Emmanuel Portfolio</li>
+           <li class="nav__logo"><a href="home.html"></a>Emmanuel Portfolio</li>
         </ul>
         <ul class="nav__options">
-           <li class="nav__option1"><a href="">Projects</a></li>
-           <li class="nav__option2"><a href="">Home</a></li>
+           <li class="nav__option1"><a href="projects.html">Projects</a></li>
+           <li class="nav__option2"><a href="">Contact</a></li>
         </ul>
     </nav>
 
     <div class="hero hero--bgimg" >
         <div class="hero__wrap">       
-    <!-- <body id="hero--bgimg" style="background-image: url('{% static '../../static/portfolio_project/images/hero-img-small.svg'%}');"> -->
             <h1>Python(Django) Developer</h1>
             <p>Software Engineering challenges the way we think in order to solve problems, using tools, previous knowledge and
             documentation available to us. The possiblilities with Software are pretty much endless.<br>
@@ -48,7 +47,6 @@
                                 <li><a href="">Sass</a></li>
                                 <li><a href="">Heroku</a></li>
                                 <li><a href="">PSQL</a></li>
-
                             </ul>
                         </picture>
 
@@ -58,6 +56,44 @@
             </div>
         </div>
     </div>
+
+    <nav class="nav1">
+        <ul class="nav1__lblock">
+            <li class="nav1__logo"><a href=""></a>Emmanuel Portfolio</li>
+        </ul>
+        <ul class="nav1__options">
+            <li class="nav1__option1"><a href="home.html">About Me</a></li>
+            <li class="nav1__option2"><a href="">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero1">
+            <h1>Projects</h1> 
+                <div class="listing">
+                    <section>
+                        <div class="listing__card">
+                            <header class="listing__header">
+                                {% for project in projects %}
+                                <h2 class="listing__title">{{ project.title }}</h2>
+                            </header>    
+                            
+                            <a href="/post/{{ project.id }}" class="listing__view">See more</a>
+                                {% endfor %}
+                            
+                        </div>
+                        <p class="listing__github" href="github.com">Visit my Github account</p>
+
+                        <ul class="toggle">
+                            <li>
+                                < PREVIOUS</li>
+                            <li>NEXT ></li>
+                        </ul>
+                    </section>
+                </div>
+    </div>
+
+    
+
 
 <footer class="footer">COPYRIGHT &copy; fulodev 2020</footer>
 </body>

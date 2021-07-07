@@ -496,6 +496,53 @@ h1 {
   }
 }
 
+.nav1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr -webkit-min-content;
+  grid-template-columns: 1fr 1fr min-content;
+  grid-template-rows: repeat(2, -webkit-min-content);
+  grid-template-rows: repeat(2, min-content);
+  background-color: var(--alert);
+}
+.nav1__lblock {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  padding: 12rem;
+}
+.nav1__options {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  display: flex;
+  align-items: center;
+  padding: 12rem;
+}
+.nav1__options li {
+  margin-left: 15rem;
+}
+.nav1__logo {
+  color: var(--alpha);
+}
+.nav1__option1 {
+  color: var(--alpha);
+  white-space: nowrap;
+}
+.nav1__option2 {
+  color: var(--alpha);
+}
+@media (min-width: 767px) {
+  .nav1__logo {
+    font-size: 26rem;
+  }
+  .nav1__option1 {
+    font-size: 26rem;
+  }
+  .nav1__option2 {
+    font-size: 26rem;
+  }
+}
+
 .hero {
   padding: 10rem;
   background-color: var(--beta);
@@ -533,6 +580,31 @@ h1 {
     font-size: 28rem;
     line-height: 37rem;
   }
+}
+
+.hero1 {
+  padding: 10rem;
+  background-color: var(--alert);
+}
+.hero1--bgimg {
+  background-image: url("{% static '../../images/hero-img-small.svg' %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.hero1 h1 {
+  font-size: 26rem;
+  text-align: center;
+  color: var(--alpha);
+  line-height: 30rem;
+  margin-bottom: 15rem;
+}
+.hero1 p {
+  font-size: 18rem;
+  text-align: center;
+  color: var(--delta);
+  line-height: 30rem;
+  margin-bottom: 15rem;
 }
 
 .container {
@@ -577,6 +649,32 @@ h1 {
   .container__list {
     font-size: 27rem;
   }
+}
+
+.paginate {
+  display: flex;
+  justify-content: space-between;
+  color: var(--delta);
+  font-weight: bold;
+}
+
+.listing {
+  margin: 30rem 10rem;
+  background-color: var(--alert);
+}
+.listing__card {
+  border: 1px var(--alpha) solid;
+  background-color: var(--delta);
+  padding: 15rem;
+  border-radius: 5rem;
+  box-shadow: 1px 2px 3px 1px var(--elements);
+  margin-bottom: 20rem;
+}
+.listing__title {
+  align-self: center;
+}
+.listing__github {
+  color: var(--alpha);
 }
 
 .footer {
