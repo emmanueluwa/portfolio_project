@@ -2,14 +2,6 @@
   padding: 10rem;
   background-color: var(--alert);
 
-  &--bgimg {
-    background-image: url("{% static '../../images/hero-img-small.svg' %}");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    // box-shadow: 0 3000px rgba(14, 10, 10, 0.3) inset;
-  }
-
   h1 {
     font-size: 26rem;
     text-align: center;
@@ -21,16 +13,12 @@
   p {
     font-size: 18rem;
     text-align: center;
-    color: var(--delta);
+    color: var(--alpha);
     line-height: 30rem;
     margin-bottom: 15rem;
   }
 
   // @include respond-to("small") {
-  //   &__wrap {
-  //     max-width: 895rem;
-  //     margin: 10rem auto;
-  //   }
 
   //   h1 {
   //     font-size: 38rem;

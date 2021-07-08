@@ -1,0 +1,28 @@
+.form {
+  background-color: var(--gamma);
+
+  &__group {
+    margin-top: 8rem;
+  }
+
+  &__label {
+    font-size: 17rem;
+    font-weight: bold;
+    color: var(--delta);
+  }
+
+  &__field {
+    width: 100%;
+    height: 40rem;
+    padding: 10rem;
+  }
+
+  &__button {
+    background-color: var(--delta);
+    border: none;
+    width: 100%;
+    color: var(--gamma);
+    font-weight: bold;
+    padding: 8rem;
+  }
+}

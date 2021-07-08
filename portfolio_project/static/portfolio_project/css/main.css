@@ -586,12 +586,6 @@ h1 {
   padding: 10rem;
   background-color: var(--alert);
 }
-.hero1--bgimg {
-  background-image: url("{% static '../../images/hero-img-small.svg' %}");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-}
 .hero1 h1 {
   font-size: 26rem;
   text-align: center;
@@ -602,7 +596,7 @@ h1 {
 .hero1 p {
   font-size: 18rem;
   text-align: center;
-  color: var(--delta);
+  color: var(--alpha);
   line-height: 30rem;
   margin-bottom: 15rem;
 }
@@ -654,8 +648,10 @@ h1 {
 .paginate {
   display: flex;
   justify-content: space-between;
-  color: var(--delta);
   font-weight: bold;
+}
+.paginate li {
+  color: var(--alpha);
 }
 
 .listing {
@@ -683,4 +679,95 @@ h1 {
   padding: 12rem;
   font-size: 13rem;
   text-align: center;
+}
+
+.nav2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr -webkit-min-content;
+  grid-template-columns: 1fr 1fr min-content;
+  grid-template-rows: repeat(2, -webkit-min-content);
+  grid-template-rows: repeat(2, min-content);
+  background-color: var(--gamma);
+}
+.nav2__lblock {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  padding: 12rem;
+}
+.nav2__options {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  display: flex;
+  align-items: center;
+  padding: 12rem;
+}
+.nav2__options li {
+  margin-left: 15rem;
+}
+.nav2__logo {
+  color: var(--delta);
+}
+.nav2__option1 {
+  color: var(--delta);
+  white-space: nowrap;
+}
+.nav2__option2 {
+  color: var(--delta);
+}
+@media (min-width: 767px) {
+  .nav2__logo {
+    font-size: 26rem;
+  }
+  .nav2__option1 {
+    font-size: 26rem;
+  }
+  .nav2__option2 {
+    font-size: 26rem;
+  }
+}
+
+.hero2 {
+  padding: 10rem;
+  background-color: var(--gamma);
+}
+.hero2 h1 {
+  font-size: 26rem;
+  text-align: center;
+  color: var(--delta);
+  line-height: 30rem;
+  margin-bottom: 15rem;
+}
+@media (min-width: 767px) {
+  .hero2 h1 {
+    font-size: 38rem;
+    max-width: 500rem;
+    line-height: 40rem;
+  }
+}
+
+.form {
+  background-color: var(--gamma);
+}
+.form__group {
+  margin-top: 8rem;
+}
+.form__label {
+  font-size: 17rem;
+  font-weight: bold;
+  color: var(--delta);
+}
+.form__field {
+  width: 100%;
+  height: 40rem;
+  padding: 10rem;
+}
+.form__button {
+  background-color: var(--delta);
+  border: none;
+  width: 100%;
+  color: var(--gamma);
+  font-weight: bold;
+  padding: 8rem;
 }/*# sourceMappingURL=main.css.map */

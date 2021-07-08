@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +27,7 @@
         <div class="hero__wrap">       
             <h1>Python(Django) Developer</h1>
             <p>Software Engineering challenges the way we think in order to solve problems, using tools, previous knowledge and
-            documentation available to us. The possiblilities with Software are pretty much endless.<br>
+            documentation available to us. The possibilities with Software are pretty much endless.<br>
             <br>
             The freedom as well as it’s challenges are what excite me and encourage me to continue learning.</p>
             <div class="container">
@@ -62,7 +62,7 @@
             <li class="nav1__logo"><a href=""></a>Emmanuel Portfolio</li>
         </ul>
         <ul class="nav1__options">
-            <li class="nav1__option1"><a href="home.html">About Me</a></li>
+            <li class="nav1__option1"><a href="/">About Me</a></li>
             <li class="nav1__option2"><a href="">Contact</a></li>
         </ul>
     </nav>
@@ -83,15 +83,39 @@
                         </div>
                         <p class="listing__github" href="github.com">Visit my Github account</p>
 
-                        <ul class="toggle">
-                            <li>
-                                < PREVIOUS</li>
-                            <li>NEXT ></li>
+                        <ul class="paginate">
+                            <li> PREVIOUS </li>
+                                 
+                            <li>NEXT </li>
                         </ul>
                     </section>
                 </div>
     </div>
 
+    <nav class="nav2">
+        <ul class="nav2__lblock">
+            <li class="nav2__logo"><a href=""></a>Emmanuel Portfolio</li>
+        </ul>
+        <ul class="nav2__options">
+            <li class="nav2__option1"><a href="/">About Me</a></li>
+            <li class="nav2__option2"><a href="">Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero2">
+        <h1>Contact form</h1>
+        <div class="form">
+            <div class="form__group">
+                <!-- <label class="form_label"> -->
+                <!-- <input class="form__field" method="POST"> -->
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="form__button" type="submit">Submit</button>
+                <!-- </input> -->
+                <!-- </label> -->
+            </div>
+        </div>
+    </div>
     
 
 
