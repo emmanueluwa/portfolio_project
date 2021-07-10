@@ -1,17 +1,40 @@
 {% load static %}
 
-{% extends "base.html" %} {% block content %}
-<a href="/projects">Projects</a> ||<a href="/">Home</a> ||
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'portfolio_project/css/main.css' %}">
 
+  <title>Post page</title>
+</head>
+<body>
 
-<div class="columns is-multiline">
-  <div class="card">
+  <nav class="nav1">
+    <ul class="nav1__lblock">
+      <li class="nav1__logo"><a href=""></a>Emmanuel Portfolio</li>
+    </ul>
+    <ul class="nav1__options">
+      <li class="nav1__option1"><a href="/">About Me</a></li>
+      <li class="nav1__option2"><a href="">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="columns is-multiline">
+    <div class="card">
       <h1>{{ projects.title }}</h1>
       <p class="title is-4">{{ projects.description }}</p>
       <p class="title is-4">{{ projects.body }}</p>
 
+    </div>
+
   </div>
 
-</div>
-{% endblock content %}
+  
+</body>
+</html>
+<a href="/projects">Projects</a> ||<a href="/">Home</a> ||
+
+
