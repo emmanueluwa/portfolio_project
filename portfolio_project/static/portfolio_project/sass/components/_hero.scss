@@ -3,7 +3,7 @@
   background-color: var(--beta);
 
   &--bgimg {
-    background-image: url("{% static '../../images/hero-img-small.svg' %}");
+    background-image: url("{% static 'portfolio_project/static/portfolio_project/images/hero-img-small.svg' %}");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
