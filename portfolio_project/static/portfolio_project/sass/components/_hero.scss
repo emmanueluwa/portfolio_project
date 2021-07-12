@@ -1,9 +1,8 @@
 .hero {
   padding: 10rem;
-  background-color: var(--beta);
 
   &--bgimg {
-    background-image: url("{% static 'portfolio_project/static/portfolio_project/images/hero-img-small.svg' %}");
+    background-image: url("../../images/hero-img-small.svg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -32,9 +31,9 @@
       margin: 10rem auto;
     }
 
-    // &--bgimg {
-    //   background-image: url()
-    // }
+    &--bgimg {
+      background-image: url("../../images/hero-img-big.svg");
+    }
 
     h1 {
       font-size: 38rem;

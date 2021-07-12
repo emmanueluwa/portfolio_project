@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'portfolio_project/css/main.css' %}">
+    <link href='{% static "/portfolio_project/images" %}' rel='img' type='svg/jpg'>
     <!-- <style id="bgimg">
         body {
             background-image: url("../../static/portfolio_project/images/hero-img-small.svg") 
@@ -13,48 +14,52 @@
     <title>Home</title>
 </head>
 <body>
-    <nav class="nav">
-        <ul class="nav__lblock">
-           <li class="nav__logo"><a href=""></a>Emmanuel Portfolio</li>
-        </ul>
-        <ul class="nav__options">
-           <li class="nav__option1"><a href="projects.html">Projects</a></li>
-           <li class="nav__option2"><a href="">Contact</a></li>
-        </ul>
-    </nav>
+   
 
     <div class="hero hero--bgimg" >
-        <div class="hero__wrap">       
-            <h1>Python(Django) Developer</h1>
-            <p>Software Engineering challenges the way we think in order to solve problems, using tools, previous knowledge and
-            documentation available to us. The possibilities with Software are pretty much endless.<br>
-            <br>
-            The freedom as well as it’s challenges are what excite me and encourage me to continue learning.</p>
-            <div class="container">
-                <div class="container__options">
-                    <div class="container__wrap">
-                        <picture class="container__picture">
-                            <source srcset="portfolio_project\static\portfolio_project\images\Cloud.svg" media="(min-width: 700px)">
-                            <source srcset="portfolio_project\static\portfolio_project\images\cloud-small.svg">
-                            <img src="portfolio_project\static\portfolio_project\images\cloud-small.svg" alt="">
-                        </picture>
-                            <div class="container__name">Tool Stack</div>
-                            <ul class="container__list">
-                                <li><a href="">Python</a></li>
-                                <li><a href="">Django</a></li>
-                                <li><a href="">React</a></li>
-                                <li><a href="">HTML</a></li>
-                                <li><a href="">CSS</a></li>
-                                <li><a href="">Sass</a></li>
-                                <li><a href="">Heroku</a></li>
-                                <li><a href="">PSQL</a></li>
-                            </ul>
+
+            <nav class="nav">
+                <ul class="nav__lblock">
+                    <li class="nav__logo"><a href=""></a>Emmanuel Portfolio</li>
+                </ul>
+                <ul class="nav__options">
+                    <li class="nav__option1"><a href="/projects">Projects</a></li>
+                    <li class="nav__option2"><a href="">Contact</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="hero__wrap">       
+                <h1>Python(Django) Developer</h1>
+                <p>Software Engineering challenges the way we think in order to solve problems, using tools, previous knowledge and
+                documentation available to us. The possibilities with Software are pretty much endless.<br>
+                <br>
+                The freedom as well as it’s challenges are what excite me and encourage me to continue learning.</p>
+                <div class="container">
+                    <div class="container__options">
+                        <div class="container__wrap">
+                            <picture class="container__picture">
+                                <source srcset="portfolio_project\static\portfolio_project\images\Cloud.svg" media="(min-width: 700px)">
+                                <source srcset="portfolio_project\static\portfolio_project\images\cloud-small.svg">
+                                <img src="portfolio_project\static\portfolio_project\images\cloud-small.svg" alt="">
+                            </picture>
+                                <div class="container__name">Tool Stack</div>
+                                <ul class="container__list">
+                                    <li><a href="">Python</a></li>
+                                    <li><a href="">Django</a></li>
+                                    <li><a href="">React</a></li>
+                                    <li><a href="">HTML</a></li>
+                                    <li><a href="">CSS</a></li>
+                                    <li><a href="">Sass</a></li>
+                                    <li><a href="">Heroku</a></li>
+                                    <li><a href="">PSQL</a></li>
+                                </ul>
+
+                        </div>
 
                     </div>
-
                 </div>
             </div>
-        </div>
     </div>
 
     <nav class="nav1">
