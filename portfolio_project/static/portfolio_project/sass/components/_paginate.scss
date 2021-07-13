@@ -1,9 +1,6 @@
 .paginate {
   display: flex;
   justify-content: space-between;
+  color: var(--alpha);
   font-weight: bold;
-
-  li {
-    color: var(--alpha);
-  }
 }

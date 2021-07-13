@@ -75,7 +75,7 @@
     <div class="hero1">
             <h1>Projects</h1> 
                 <div class="listing">
-                    <section>
+                    <div class="listing__section">
                         <div class="listing__card">
                             <header class="listing__header">
                                 {% for project in projects %}
@@ -86,14 +86,21 @@
                                 {% endfor %}
                             
                         </div>
-                        <p class="listing__github" href="github.com">Visit my Github account</p>
-
-                        <ul class="paginate">
-                            <li> PREVIOUS </li>
-                                 
-                            <li>NEXT </li>
-                        </ul>
-                    </section>
+                        <div class="listing__card">
+                            <header class="listing__header">
+                                {% for project in projects %}
+                                <h2 class="listing__title">{{ project.title }}</h2>
+                            </header>
+                        
+                            <a href="/post/{{ project.id }}" class="listing__view">See more</a>
+                            {% endfor %}
+                        
+                        </div>
+                    </div>
+                </div>
+                <div hero__links>
+                    <p class="listing__projects" href="projects.html">View all projects</p>
+                    <p class="listing__github" href="github.com">Visit my Github account</p>
                 </div>
     </div>
 

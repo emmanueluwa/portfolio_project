@@ -23,32 +23,56 @@
         </ul>
     </nav>
 
-<h3>
-    Below are some projects worth showing you that i have worked on so far, feel free to also view some of
-    the smaller projects i have worked on via my <a href="">Github</a>
-</h3>
+    <div class="hero1">
+        <h1>Projects</h1>
+        <div class="listing">
+            <div class="listing__section">
+                <div class="listing__card">
+                    <header class="listing__header">
+                        
+                        {% for project in projects %}
+                        <h2 class="listing__title">{{ project.title }}</h2>
+                        <picture class="listing__picture">
+                            <source srcset="portfolio_project\static\portfolio_project\images\projects-img.svg" media="(min-width: 767px)">
+                            <img src="portfolio_project\static\portfolio_project\images\projects-img.svg" alt="">
+                        </picture>
+                        <p class="listing__description">{{ project.description }}</p>
+                        <p class="listing__body">{{ project.body|truncatewords:20 }}</p>
+                    </header>
+    
+                    <a href="/post/{{ project.id }}" class="listing__view">See more</a>
+                    {% endfor %}
+    
+                </div>
+                <div class="listing__card">
+                    <header class="listing__header">
+                        {% for project in projects %}
+                        <h2 class="listing__title">{{ project.title }}</h2>
+                            <picture class="listing__picture">
+                                <source srcset="portfolio_project\static\portfolio_project\images\lounge-img.svg" media="(min-width: 767px)">
+                                <img src="portfolio_project\static\portfolio_project\images\lounge-img.svg" alt="">
+                            </picture>
+                        <p class="listing__description">{{ project.description }}</p>
+                        <p class="listing__body">{{ project.body|truncatewords:20 }}</p>
 
-
-<div class="columns is-multiline">
-    {% for project in projects %}
-    <div class="card">
-        <a style="text-decoration: none; color: black;" href="/post/{{ project.id }}">
-            <p class="title is-4">{{ project.title }}</p>
-            <p class="title is-4">{{ project.description }}</p>
-            <p class="title is-4">{{ project.body|truncatewords:20 }}</p>
-
-
-
-            <footer class="card-footer">
-                <a href="/post/{{ project.id }}" class="card-footer-item">See more</a>
-            </footer>
-        </a>
+                    </header>
+    
+                    <a href="/post/{{ project.id }}" class="listing__view">See more</a>
+                    {% endfor %}
+    
+                </div>
+            </div>
+        </div>
+        <div hero__links>
+            <p class="listing__github" href="github.com">Visit my Github account</p>
+        
+        </div>
+        <ul class="paginate">
+            <li>
+                < PREVIOUS</li>
+            <li>NEXT ></li>
+        </ul>
     </div>
-
-    {% endfor %}
-</div>
-
-
 
 </body>
 </html>

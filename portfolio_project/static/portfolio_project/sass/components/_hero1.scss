@@ -1,6 +1,8 @@
 .hero1 {
   padding: 10rem;
   background-color: var(--alert);
+  // max-width: 895rem;
+  // margin: 10rem auto;
 
   h1 {
     font-size: 26rem;
@@ -18,16 +20,15 @@
     margin-bottom: 15rem;
   }
 
-  // @include respond-to("small") {
+  @include respond-to("small") {
+    h2 {
+      font-size: 38rem;
+      line-height: 40rem;
+    }
 
-  //   h1 {
-  //     font-size: 38rem;
-  //     line-height: 40rem;
-  //   }
-
-  //   p {
-  //     font-size: 28rem;
-  //     line-height: 37rem;
-  //   }
-  // }
+    p {
+      font-size: 28rem;
+      line-height: 37rem;
+    }
+  }
 }
