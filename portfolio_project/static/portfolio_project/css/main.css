@@ -664,80 +664,6 @@ h1 {
   }
 }
 
-.listing {
-  margin: 30rem 10rem;
-  background-color: var(--alert);
-  display: grid;
-}
-.listing__card {
-  border: 1px var(--alpha) solid;
-  background-color: var(--delta);
-  padding: 15rem;
-  border-radius: 5rem;
-  box-shadow: 1px 2px 3px 1px var(--elements);
-  margin-bottom: 20rem;
-  display: grid;
-  margin-bottom: 15rem;
-}
-.listing__title {
-  align-self: center;
-  font-size: 25rem;
-  align-self: center;
-  text-align: center;
-}
-.listing__view {
-  text-align: center;
-  font-size: 14rem;
-  text-decoration: underline;
-  display: block;
-  color: var(--alpha);
-}
-.listing__github {
-  color: var(--alpha);
-  text-align: center;
-  align-self: center;
-}
-.listing__section {
-  display: grid;
-}
-.listing__card {
-  display: grid;
-  margin-bottom: 15rem;
-}
-.listing__picture {
-  display: none;
-  border-radius: 5px;
-  border-collapse: separate;
-}
-@media (min-width: 767px) {
-  .listing h2 {
-    font-size: 34rem;
-  }
-  .listing p {
-    font-size: 18rem;
-  }
-  .listing__section {
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 15rem;
-  }
-  .listing__view {
-    font-size: 20rem;
-  }
-  .listing__picture {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    display: flex;
-    border-radius: 50px;
-  }
-  .listing__picture img {
-    width: 100%;
-  }
-  .listing__body {
-    display: none;
-  }
-}
-
 .footer {
   background-color: var(--alert);
   color: var(--delta);
@@ -842,4 +768,37 @@ h1 {
   justify-content: space-between;
   color: var(--alpha);
   font-weight: bold;
+}
+
+.card {
+  display: grid;
+  place-items: center;
+  line-height: 1.6;
+  background-color: var(--delta);
+}
+.card *,
+.card *::before,
+.card *::after {
+  box-sizing: border-box;
+}
+.card p,
+.card h2,
+.card a {
+  color: var(--delta);
+  font-weight: bolder;
+}
+.card__template {
+  background-image: url("../../images/projects-img.svg");
+  background-size: cover;
+  padding: 10rem 0 0;
+  border-radius: 5rem;
+  max-width: 35ch;
+  box-shadow: 1px 2px 3px 1px var(--delta);
+  margin-bottom: 20rem;
+  display: grid;
+  margin-bottom: 15rem;
+}
+.card__content {
+  padding: 1.5em;
+  background: black;
 }/*# sourceMappingURL=main.css.map */
