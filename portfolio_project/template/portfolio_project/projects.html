@@ -31,6 +31,7 @@
                     <header class="listing__header">
                         
                         {% for project in projects %}
+                        {% if forloop.first  %}
                         <h2 class="listing__title">{{ project.title }}</h2>
                         <picture class="listing__picture">
                             <source srcset="portfolio_project\static\portfolio_project\images\projects-img.svg" media="(min-width: 767px)">
@@ -40,13 +41,16 @@
                         <p class="listing__body">{{ project.body|truncatewords:20 }}</p>
                     </header>
     
-                    <a href="/post/{{ project.id }}" class="listing__view">See more</a>
-                    {% endfor %}
+                        <a href="/post/{{ project.id }}" class="listing__view">See more</a>
+                        {% endif %}
+                        {% endfor %}
     
                 </div>
                 <div class="listing__card">
                     <header class="listing__header">
                         {% for project in projects %}
+                        {% if forloop.counter == 2 %}
+
                         <h2 class="listing__title">{{ project.title }}</h2>
                             <picture class="listing__picture">
                                 <source srcset="portfolio_project\static\portfolio_project\images\lounge-img.svg" media="(min-width: 767px)">
@@ -57,8 +61,9 @@
 
                     </header>
     
-                    <a href="/post/{{ project.id }}" class="listing__view">See more</a>
-                    {% endfor %}
+                        <a href="/post/{{ project.id }}" class="listing__view">See more</a>
+                        {% endif %}
+                        {% endfor %}
     
                 </div>
             </div>
