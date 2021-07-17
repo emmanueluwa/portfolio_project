@@ -1,37 +1,55 @@
 .card {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
+  margin: 30rem 10rem;
+  max-width: 1000px;
   display: grid;
-  place-items: center;
-  line-height: 1.6;
-  background-color: var(--delta);
-
-  p,
-  h2,
-  a {
-    color: var(--delta);
-    font-weight: bolder;
-  }
-
-  &__template {
-    // color: var(--delta);
-    background-image: url("../../images/projects-img.svg");
-    background-size: cover;
-    padding: 10rem 0 0;
-    border-radius: 5rem;
-    max-width: 35ch;
-    box-shadow: 1px 2px 3px 1px var(--delta);
-    margin-bottom: 20rem;
-    display: grid;
-    margin-bottom: 15rem;
-  }
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  gap: 20px;
 
   &__content {
-    padding: 1.5em;
-    background: black;
+    box-shadow: 1px 2px 3px 1px var(--elements);
+    border: 1px var(--alpha) solid;
+    border-radius: 5rem;
+    // margin-bottom: 20rem;
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+    border-radius: 5rem;
+    size: cover;
+  }
+
+  &__text {
+    display: grid;
+    line-height: 1.5;
+    font-size: 0.9em;
+    // padding: 15px;
+    background: var(--delta);
+  }
+
+  h2 {
+    margin-bottom: 20rem;
+    font-size: 23rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 18rem;
+  }
+
+  &__info {
+    padding: 15px;
+    border-bottom: 2px solid var(--alpha);
+    border-top: 2px solid var(--alpha);
+    background: var(--delta);
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+    color: var(--alpha);
   }
 }
