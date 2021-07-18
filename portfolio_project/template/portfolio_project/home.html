@@ -82,9 +82,7 @@
                         {% for project in projects %}
                         {% if forloop.first %}
                         <h2 class="card__title">{{ project.title }}</h2>
-                        <p class="card__body">{{ project.description }}</p>
-            
-            
+                        <p class="card__description">{{ project.description }}</p>
                         {% endif %}
                         {% endfor %}
                     </div>
@@ -102,9 +100,9 @@
                     <img src="portfolio_project\static\portfolio_project\images\lounge-img.svg" alt="" class="card__image">
                     <div class="card__text">
                         {% for project in projects %}
-                        {% if forloop.first %}
+                        {% if forloop.counter == 2 %}
                         <h2 class="card__title">{{ project.title }}</h2>
-                        <p class="card__body">{{ project.description }}</p>
+                        <p class="card__description">{{ project.description }}</p>
                         {% endif %}
                         {% endfor %}
                     </div>
@@ -116,36 +114,18 @@
                     </div>
                 </div>
             </div>
-
     </div>
 
+    <nav class="nav1">
+        <ul class="nav1__lblock">
+            <li class="nav1__logo"><a href="https://github.com/emmanueluwa">Github</a></li>
+        </ul>
+        <ul class="nav1__options">
+            <li class="nav1__option2"><a href="/projects">Projects</a></li>
+        </ul>
+    </nav>
 
-
-   
-<!-- 
-                <div class="listing">
-                    <div class="listing__section">
-
-                        <div class="listing__card">
-                            <header class="listing__header">
-                                {% for project in projects %}
-                                {% if forloop.counter == 2 %}
-                                <h2 class="listing__title">{{ project.title }}</h2>
-                                <p class="listing__description">{{ project.description }}</p>
-
-                            </header>
-                        
-                                <a href="/post/{{ project.id }}" class="listing__view">See more</a>
-                                {% endif %}
-                                {% endfor %}
-                        
-                        </div>
-                    </div>
-                </div>
-                <div hero__links>
-                    <p class="listing__projects" href="projects.html">View all projects</p>
-                    <p class="listing__github" href="github.com">Visit my Github account</p>
-                </div> -->
+             
 
     <nav class="nav2">
         <ul class="nav2__lblock">

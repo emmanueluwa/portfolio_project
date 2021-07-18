@@ -597,16 +597,23 @@ h1 {
 .hero1 p {
   font-size: 18rem;
   text-align: center;
-  color: var(--alpha);
-  line-height: 30rem;
-  margin-bottom: 15rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding: 8rem;
 }
 .hero1 h2 {
   font-size: 22rem;
   text-align: center;
-  color: var(--alpha);
   line-height: 30rem;
-  margin-top: 15rem;
+  margin-top: 0;
+  text-align: center;
+}
+.hero1__links {
+  display: flex;
+  display: grid;
+  justify-content: space-between;
+  -webkit-text-decoration-color: var(--alpha);
+          text-decoration-color: var(--alpha);
 }
 @media (min-width: 767px) {
   .hero1 h2 {
@@ -615,7 +622,8 @@ h1 {
   }
   .hero1 p {
     font-size: 28rem;
-    line-height: 37rem;
+    line-height: 50rem;
+    padding: 10rem;
   }
 }
 
@@ -778,10 +786,11 @@ h1 {
 }
 
 .card {
-  margin: 30rem 10rem;
+  margin: 30rem 20rem;
   max-width: 1000px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .card__content {
@@ -794,20 +803,32 @@ h1 {
   display: block;
   border-radius: 5rem;
   size: cover;
+  line-height: 0;
 }
 .card__text {
   display: grid;
-  line-height: 1.5;
+  line-height: 5;
   font-size: 0.9em;
   background: var(--delta);
+  justify-content: space-between;
+  -webkit-text-decoration-color: none;
+          text-decoration-color: none;
+  text-align: center;
 }
 .card h2 {
-  margin-bottom: 20rem;
+  margin-top: 10rem;
   font-size: 23rem;
+  display: block;
+  text-align: center;
 }
 .card p {
   margin-bottom: 0;
   font-size: 18rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.card a {
+  text-align: center;
 }
 .card__info {
   padding: 15px;
@@ -817,8 +838,21 @@ h1 {
 }
 .card__link {
   text-decoration: none;
+  display: grid;
+  margin: right;
 }
 .card__link:hover {
   text-decoration: underline;
   color: var(--alpha);
+}
+@media (min-width: 767px) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 15rem;
+    display: flex;
+    display: grid;
+  }
+  .card__content {
+    justify-content: space-between;
+  }
 }/*# sourceMappingURL=main.css.map */

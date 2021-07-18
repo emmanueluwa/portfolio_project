@@ -1,8 +1,10 @@
 .card {
-  margin: 30rem 10rem;
+  margin: 30rem 20rem;
   max-width: 1000px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  // grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 
   &__content {
@@ -17,24 +19,36 @@
     display: block;
     border-radius: 5rem;
     size: cover;
+    line-height: 0;
   }
 
   &__text {
     display: grid;
-    line-height: 1.5;
+    line-height: 5;
     font-size: 0.9em;
     // padding: 15px;
     background: var(--delta);
+    justify-content: space-between;
+    text-decoration-color: none;
+    text-align: center;
   }
 
   h2 {
-    margin-bottom: 20rem;
+    margin-top: 10rem;
     font-size: 23rem;
+    display: block;
+    text-align: center;
   }
 
   p {
     margin-bottom: 0;
     font-size: 18rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  a {
+    text-align: center;
   }
 
   &__info {
@@ -46,10 +60,23 @@
 
   &__link {
     text-decoration: none;
+    display: grid;
+    margin: right;
   }
 
   &__link:hover {
     text-decoration: underline;
     color: var(--alpha);
+  }
+
+  @include respond-to("small") {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 15rem;
+    display: flex;
+    display: grid;
+
+    &__content {
+      justify-content: space-between;
+    }
   }
 }

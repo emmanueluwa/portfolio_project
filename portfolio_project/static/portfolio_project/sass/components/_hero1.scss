@@ -15,17 +15,24 @@
   p {
     font-size: 18rem;
     text-align: center;
-    color: var(--alpha);
-    line-height: 30rem;
-    margin-bottom: 15rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding: 8rem;
   }
 
   h2 {
     font-size: 22rem;
     text-align: center;
-    color: var(--alpha);
     line-height: 30rem;
-    margin-top: 15rem;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  &__links {
+    display: flex;
+    display: grid;
+    justify-content: space-between;
+    text-decoration-color: var(--alpha);
   }
 
   @include respond-to("small") {
@@ -36,7 +43,8 @@
 
     p {
       font-size: 28rem;
-      line-height: 37rem;
+      line-height: 50rem;
+      padding: 10rem;
     }
   }
 }
