@@ -530,6 +530,20 @@ h1 {
 .nav1__option2 {
   color: var(--alpha);
 }
+.nav1__github {
+  align-items: center;
+  display: flex;
+  padding: 15rem;
+  text-align: center;
+}
+.nav1__github li {
+  font-size: 24rem;
+}
+.nav1__githublogo {
+  color: var(--alpha);
+  font-size: 18rem;
+  display: flex;
+}
 @media (min-width: 767px) {
   .nav1__logo {
     font-size: 26rem;
@@ -616,14 +630,28 @@ h1 {
           text-decoration-color: var(--alpha);
 }
 @media (min-width: 767px) {
+  .hero1 {
+    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .hero1 h2 {
     font-size: 38rem;
     line-height: 40rem;
+    display: grid;
+    text-align: center;
+    padding: 5rem;
   }
   .hero1 p {
     font-size: 28rem;
     line-height: 50rem;
     padding: 10rem;
+  }
+  .hero1 h1 {
+    text-align: center;
+    padding: 10rem;
+    vertical-align: top;
   }
 }
 
@@ -787,7 +815,7 @@ h1 {
 
 .card {
   margin: 30rem 20rem;
-  max-width: 1000px;
+  max-width: 895rem;
   display: grid;
   display: flex;
   flex-wrap: wrap;
@@ -803,7 +831,6 @@ h1 {
   display: block;
   border-radius: 5rem;
   size: cover;
-  line-height: 0;
 }
 .card__text {
   display: grid;
@@ -847,12 +874,16 @@ h1 {
 }
 @media (min-width: 767px) {
   .card {
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 15rem;
-    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-column-gap: 5rem;
     display: grid;
+    padding: 20px;
   }
   .card__content {
     justify-content: space-between;
+    float: left;
+  }
+  .card h2 {
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -13,6 +13,7 @@
 </head>
 <body>
     
+    
     <nav class="nav1">
         <ul class="nav1__lblock">
             <li class="nav1__logo"><a href=""></a>Emmanuel Portfolio</li>
@@ -25,59 +26,64 @@
 
     <div class="hero1">
         <h1>Projects</h1>
-        <div class="listing">
-            <div class="listing__section">
-                <div class="listing__card">
-                    <header class="listing__header">
-                        
-                        {% for project in projects %}
-                        {% if forloop.first  %}
-                        <h2 class="listing__title">{{ project.title }}</h2>
-                        <picture class="listing__picture">
-                            <source srcset="portfolio_project\static\portfolio_project\images\projects-img.svg" media="(min-width: 767px)">
-                            <img src="portfolio_project\static\portfolio_project\images\projects-img.svg" alt="">
-                        </picture>
-                        <p class="listing__description">{{ project.description }}</p>
-                        <p class="listing__body">{{ project.body|truncatewords:20 }}</p>
-                    </header>
-    
-                        <a href="/post/{{ project.id }}" class="listing__view">See more</a>
-                        {% endif %}
-                        {% endfor %}
-    
+
+        <div class="card">
+            <div class="card__content">
+                <div class="card__imagebox">
+                    <img src="portfolio_project\static\portfolio_project\images\projects-img.svg" alt="" class="card__image">
                 </div>
-                <div class="listing__card">
-                    <header class="listing__header">
-                        {% for project in projects %}
-                        {% if forloop.counter == 2 %}
+                <div class="card__text">
+                    {% for project in projects %}
+                    {% if forloop.first %}
+                    <h2 class="card__title">{{ project.title }}</h2>
+                    <p class="card__description">{{ project.description }}</p>
+                    <p class="card__body">{{ project.body|truncatewords:20 }}</p>
 
-                        <h2 class="listing__title">{{ project.title }}</h2>
-                            <picture class="listing__picture">
-                                <source srcset="portfolio_project\static\portfolio_project\images\lounge-img.svg" media="(min-width: 767px)">
-                                <img src="portfolio_project\static\portfolio_project\images\lounge-img.svg" alt="">
-                            </picture>
-                        <p class="listing__description">{{ project.description }}</p>
-                        <p class="listing__body">{{ project.body|truncatewords:20 }}</p>
-
-                    </header>
-    
-                        <a href="/post/{{ project.id }}" class="listing__view">See more</a>
-                        {% endif %}
-                        {% endfor %}
-    
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="card__info">
+                    <div>
+                        <a href="/post/<int:post_id>" class="card__link">See more</a>
+                    </div>
+        
                 </div>
             </div>
         </div>
-        <div hero__links>
-            <p class="listing__github" href="github.com">Visit my Github account</p>
         
+        <div class="card">
+            <div class="card__content">
+                <img src="portfolio_project\static\portfolio_project\images\lounge-img.svg" alt="" class="card__image">
+                <div class="card__text">
+                    {% for project in projects %}
+                    {% if forloop.counter == 2 %}
+                    <h2 class="card__title">{{ project.title }}</h2>
+                    <p class="card__description">{{ project.description }}</p>
+                    <p class="card__body">{{ project.body|truncatewords:20 }}</p>
+                   
+                </div>
+                <div class="card__info">
+                    <div>
+                        <a href="/post/{{post.id}}" class="card__link">See more</a>
+                    {% endif %}
+                    {% endfor %}
+                    </div>
+        
+                </div>
+            </div>
         </div>
-        <ul class="paginate">
-            <li>
-                < PREVIOUS</li>
-            <li>NEXT ></li>
-        </ul>
+
     </div>
+
+    <nav class="nav1">
+        <section>
+        <ul class="nav1__github">
+            <li class="nav1__githublogo"><a href="https://github.com/emmanueluwa">Github</a></li>
+        </ul>
+        </section>
+    </nav>
+
+     
 
 </body>
 </html>

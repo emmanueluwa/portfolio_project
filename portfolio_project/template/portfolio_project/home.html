@@ -77,7 +77,9 @@
 
             <div class="card">
                 <div class="card__content">
-                    <img src="portfolio_project\static\portfolio_project\images\projects-img.svg" alt="" class="card__image">
+                    <div class="card__imagebox">
+                        <img src="portfolio_project\static\portfolio_project\images\projects-img.svg" alt="" class="card__image">
+                    </div>
                     <div class="card__text">
                         {% for project in projects %}
                         {% if forloop.first %}

@@ -39,6 +39,22 @@
     color: var(--alpha);
   }
 
+  &__github {
+    align-items: center;
+    display: flex;
+    padding: 15rem;
+    text-align: center;
+
+    li {
+      font-size: 24rem;
+    }
+  }
+  &__githublogo {
+    color: var(--alpha);
+    font-size: 18rem;
+    display: flex;
+  }
+
   @include respond-to("small") {
     &__logo {
       font-size: 26rem;
