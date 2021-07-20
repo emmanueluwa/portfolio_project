@@ -14,29 +14,31 @@
 </head>
 <body>
 
-  <nav class="nav1">
-    <ul class="nav1__lblock">
-      <li class="nav1__logo"><a href=""></a>Emmanuel Portfolio</li>
-    </ul>
-    <ul class="nav1__options">
-      <li class="nav1__option1"><a href="/">About Me</a></li>
-      <li class="nav1__option2"><a href="">Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="nav1">
+      <ul class="nav1__lblock">
+        <li class="nav1__logo"><a href=""></a>Emmanuel Portfolio</li>
+      </ul>
+      <ul class="nav1__options">
+        <li class="nav1__option1"><a href="/">About Me</a></li>
+        <li class="nav1__option2"><a href="">Contact</a></li>
+      </ul>
+    </nav>
 
-  <div class="columns is-multiline">
-    <div class="card">
-      <h1>{{ projects.title }}</h1>
-      <p class="title is-4">{{ projects.description }}</p>
-      <p class="title is-4">{{ projects.body }}</p>
-
-    </div>
 
   </div>
 
+      <div class="card">
+        <div class="card__content">
+          <div class="card__text">
+            <h2 class="card__title">{{ projects.title }}</h2>
+            <p class="card__description">{{ projects.description }}</p>
+            <p class="card__body">{{ projects.body}}</p>
+      
+          </div>
+        </div>
+      </div>
   
 </body>
 </html>
-<a href="/projects">Projects</a> ||<a href="/">Home</a> ||
 
 
