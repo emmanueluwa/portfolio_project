@@ -12,7 +12,7 @@ from django.shortcuts import get_object_or_404, render
 
 
 def home_page(request):
-    projects = Portfolio.objects.all()
+    projects = Portfolio.objects.all()[0:2]
 
     if request.method == 'GET':
         form = ContactForm()
@@ -52,7 +52,9 @@ def projects_page(request):
     return render(request, "projects.html", context=context)
 
 
-def post_page(request, slug):
-    post = get_object_or_404(Portfolio, slug=slug)
+def post_page(request, post_id):
+    post = Portfolio.objects.get(id=post_id)
+
     context = {'post': post}
+    
     return render(request, "post.html", context=context)

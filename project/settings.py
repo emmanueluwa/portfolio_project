@@ -136,12 +136,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = 'portfolio_project/static/portfolio_project/'
-
-# MEDIA_URL = 'portfolio_project/static/portfolio_project/images/'
-
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR , 'portfolio_project/static/portfolio_project/' )
 ]
+VENV_PATH =os.path.dirname(BASE_DIR)
+STATIC_ROOT = os.path.join(VENV_PATH, 'portfolio_project/static/portfolio_project/static_root')
+
+# MEDIA_URL = 'portfolio_project/static/portfolio_project/images/'
+
 
 ## AWS S3, Cloudfront
 # STATIC_ROOT = [

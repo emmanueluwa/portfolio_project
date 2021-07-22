@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User 
-
+from django.urls import reverse
 
 class Tag(models.Model):
     name = models.CharField(max_length=100)
@@ -18,12 +18,13 @@ class Portfolio(models.Model):
     link = models.URLField(max_length=100, blank=True, null=True)
     tag = models.ManyToManyField(Tag, blank=True)
     created_at = models.DateField(auto_now_add=True)
+    thumbnail = models.ImageField(null=" ")
 
     def __str__(self):
         return self.title
 
     
-
-    
+  
+        
     
 

@@ -25,53 +25,30 @@
 
     <div class="hero1">
         <h1>Projects</h1>
-
+        {% for project in projects %}
         <div class="card">
             <div class="card__content">
                 <div class="card__imagebox">
-                    <img src="portfolio_project\static\portfolio_project\images\projects-img.svg" alt="" class="card__image">
+                    <img src="{{ project.thumbnail.url }}" alt="" class="card__image">
                 </div>
                 <div class="card__text">
-                    {% for project in projects %}
-                    {% if forloop.first %}
+         
+                    
                     <h2 class="card__title">{{ project.title }}</h2>
                     <p class="card__description">{{ project.description }}</p>
                     <p class="card__body">{{ project.body|truncatewords:20 }}</p>
 
-                    {% endif %}
-                    {% endfor %}
                 </div>
                 <div class="card__info">
                     <div>
-                        <a href="/post/1" class="card__link">See more</a>
+                        <a href="{% url 'portfolio_project:post' project.id %}" class="card__link">See more</a>
                     </div>
         
                 </div>
             </div>
         </div>
-        
-        <div class="card">
-            <div class="card__content">
-                <img src="portfolio_project\static\portfolio_project\images\lounge-img.svg" alt="" class="card__image">
-                <div class="card__text">
-                    {% for project in projects %}
-                    {% if forloop.counter == 2 %}
-                    <h2 class="card__title">{{ project.title }}</h2>
-                    <p class="card__description">{{ project.description }}</p>
-                    <p class="card__body">{{ project.body|truncatewords:20 }}</p>
-                   
-                </div>
-                <div class="card__info">
-                    <div>
-                        <a href="/post/2" class="card__link">See more</a>
-                    {% endif %}
-                    {% endfor %}
-                    </div>
-        
-                </div>
-            </div>
-        </div>
-
+        {% endfor %}
+     
     </div>
 
     <nav class="nav1">

@@ -13,8 +13,9 @@ app_name = "portfolio_project"
 urlpatterns = [
     path("", views.home_page, name="home"),
     path("projects", views.projects_page, name="projects"),
-    path("<slug:slug>/", views.post_page, name="post"),
-    path(r'^favicon\.ico$', RedirectView.as_view(url='/static/imges/favicon.ico')), 
+    path("post/<int:post_id>", views.post_page, name="post"),
+    # path(r'^favicon\.ico$', RedirectView.as_view(url='/static/imges/favicon.ico')), 
 ]
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  
