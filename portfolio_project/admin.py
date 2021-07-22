@@ -11,6 +11,7 @@ from .models import Portfolio, Tag
 class PortfolioAdmin(admin.ModelAdmin):
     list_display = (
       "title",
+      "slug", 
       "description",
       "body",
       "link",

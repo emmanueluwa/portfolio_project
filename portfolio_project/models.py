@@ -12,7 +12,7 @@ class Tag(models.Model):
 
 class Portfolio(models.Model):
     title = models.CharField(max_length=150)
-    slug = models.SlugField(max_length=100, null=" ")
+    slug = models.SlugField(max_length=100, unique=True, null=" ")
     description = models.CharField(max_length=150)
     body = models.TextField()
     link = models.URLField(max_length=100, blank=True, null=True)

@@ -105,14 +105,14 @@
                         {% if forloop.counter == 2 %}
                         <h2 class="card__title">{{ project.title }}</h2>
                         <p class="card__description">{{ project.description }}</p>
-                        {% endif %}
-                        {% endfor %}
+                       
                     </div>
                     <div class="card__info">
                         <div>
-                            <a href="/post/2" class="card__link">See more</a>
+                            <a href="{% url 'post' project.slug %}" class="card__link">See more</a>
                         </div>
-            
+                        {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>

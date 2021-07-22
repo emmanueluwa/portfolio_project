@@ -6,6 +6,8 @@ from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.conf import settings
 
+from django.shortcuts import get_object_or_404, render
+
 
 
 
@@ -50,7 +52,7 @@ def projects_page(request):
     return render(request, "projects.html", context=context)
 
 
-def post_page(request, post_id):
-    projects = Portfolio.objects.get(id=post_id)
-    context = {'projects': projects}
+def post_page(request, slug):
+    post = get_object_or_404(Portfolio, slug=slug)
+    context = {'post': post}
     return render(request, "post.html", context=context)
