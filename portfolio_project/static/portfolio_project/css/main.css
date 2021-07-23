@@ -886,4 +886,41 @@ h1 {
   .card h2 {
     text-align: center;
   }
+}
+
+.posting {
+  display: grid;
+}
+.posting img {
+  width: 100%;
+  display: block;
+  border-radius: 5rem;
+  size: cover;
+}
+.posting h1 {
+  text-align: center;
+  font-size: 24rem;
+  padding: 15rem;
+}
+.posting h2 {
+  text-align: center;
+  font-size: 21rem;
+  padding: 10rem;
+}
+.posting p {
+  font-size: 18rem;
+  padding: 8rem;
+  background-color: var(--light);
+}
+@media (min-width: 767px) {
+  .posting__top {
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+  .posting__top img {
+    width: 100%;
+    display: block;
+    border-radius: 5rem;
+    size: cover;
+  }
 }/*# sourceMappingURL=main.css.map */

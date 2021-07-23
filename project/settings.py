@@ -46,8 +46,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "portfolio_project.apps.PortfolioProjectConfig",
     'django_sass',
+    'ckeditor',
+    'crispy_forms',
 
 ]
+
+CRISPY_FORMS_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware' ,
@@ -138,7 +142,7 @@ USE_TZ = True
 
 ###################  for development #################
 #route for web browser
-STATIC_URL = 'portfolio_project/static/'
+STATIC_URL = '/portfolio_project/static/'
 
 #route for django
 STATICFILES_DIRS = [

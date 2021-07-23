@@ -26,24 +26,21 @@
     </nav>
 
 
-<div class="hero1">
 
-  <div class="card"></div>
-    <h1 class="card__title">{{ post.title }}</h1>
-    <div class="card__content">
-      <div class="card__imagebox">
-        <img src="{{ post.thumbnail.url }}" alt="" class="card__image">
+  <div class="posting">
+    <div class="posting__top">
+      <img src="{{ post.thumbnail.url }}" alt="" class="post__image">
+      <div class="posting__toptext">
+        <h1 class="posting__title">{{ post.title }}</h1>
+        <h2 class="posting__description">{{ post.description }}</h2>
       </div>
-      <div class="card__text">
+    </div>
 
-
-        <p class="card__description">{{ post.description }}</p>
-        <p class="card__body">{{ post.body }}</p>
-
-      </div>
-
+    <div class="posting__main">
+      <p class="posting__body">{{ post.body|safe }}</p>
     </div>
   </div>
+
 
 
 

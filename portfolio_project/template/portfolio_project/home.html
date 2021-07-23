@@ -1,4 +1,5 @@
 {% load static %} 
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +10,6 @@
 
     <link rel="stylesheet" href="{% static 'portfolio_project/css/main.css' %}">
     <link href='{% static "/portfolio_project/images" %}' rel='img' type='svg/jpg'>
-    <!-- <style id="bgimg">
-        body {
-            background-image: url("../../static/portfolio_project/images/hero-img-small.svg") 
-        }
-    </style> -->
     <title>Home</title>
 </head>
 <body>
@@ -129,7 +125,7 @@
                 <!-- <label class="form_label"> -->
                 <!-- <input class="form__field" method="POST"> -->
                     {% csrf_token %}
-                    {{ form.as_p }}
+                    {{ form.as_p|crispy }}
                     <button class="form__button" type="submit">Submit</button>
                 <!-- </input> -->
                 <!-- </label> -->
