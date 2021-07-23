@@ -15,9 +15,9 @@ import os
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
 
-# WHITENOISE_MIMETYPES = {
-#     '.xsl': 'application/xml'
-# }
+WHITENOISE_MIMETYPES = {
+    '.xsl': 'application/xml'
+}
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -135,12 +135,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = 'portfolio_project/static/portfolio_project/'
+
+###################  for development #################
+#route for web browser
+STATIC_URL = 'portfolio_project/static/'
+
+#route for django
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR , 'portfolio_project/static/portfolio_project/' )
 ]
-VENV_PATH =os.path.dirname(BASE_DIR)
-STATIC_ROOT = os.path.join(VENV_PATH, 'portfolio_project/static/portfolio_project/static_root')
+
+MEDIA_URL = '/media/'
+######################################################
+
+# VENV_PATH =os.path.dirname(BASE_DIR)
+# STATIC_ROOT = os.path.join(VENV_PATH, 'portfolio_project/static/portfolio_project/static_root')
 
 # MEDIA_URL = 'portfolio_project/static/portfolio_project/images/'
 

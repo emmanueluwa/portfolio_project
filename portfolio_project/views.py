@@ -39,7 +39,7 @@ def home_page(request):
                
     context = {'projects': projects, 'form':form }
 
-    return render(request, "home.html", context)
+    return render(request=request, template_name="home.html", context=context)
 
 
 
@@ -49,12 +49,10 @@ def projects_page(request):
 
     context = {'projects': projects}
 
-    return render(request, "projects.html", context=context)
+    return render(request=request, template_name="projects.html", context=context)
 
 
 def post_page(request, post_id):
     post = Portfolio.objects.get(id=post_id)
-
     context = {'post': post}
-    
     return render(request, "post.html", context=context)

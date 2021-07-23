@@ -5,8 +5,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'portfolio_project/css/main.css' %}">
-  <link href='{% static "/portfolio_project/images" %}' rel='img' type='svg/jpg'>
+
+  <base href="/">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'portfolio_project/css/main.css' %}" >
+  <link href='{% static "portfolio_project/images" %}' rel='img' type='svg/jpg'>
 
   <title>Post page</title>
 </head>
@@ -23,17 +26,29 @@
     </nav>
 
 
-    <div class="card">
-      <div class="card__content">
-        <div class="card__text">
-          <h1 class="card__title">{{ projects.title }}</h1>
-          <h2 class="card__description">{{ projects.description }}</h2>
-          <p class="card__body">{{ projects.body}}</p>
-    
-        </div>
+<div class="hero1">
+
+  <div class="card"></div>
+    <h1 class="card__title">{{ post.title }}</h1>
+    <div class="card__content">
+      <div class="card__imagebox">
+        <img src="{{ post.thumbnail.url }}" alt="" class="card__image">
       </div>
+      <div class="card__text">
+
+
+        <p class="card__description">{{ post.description }}</p>
+        <p class="card__body">{{ post.body }}</p>
+
+      </div>
+
     </div>
-  
+  </div>
+
+
+
+</div>
+
 </body>
 </html>
 
