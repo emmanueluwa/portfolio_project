@@ -2,16 +2,12 @@
   margin: 30rem 20rem;
   max-width: 895rem;
   display: grid;
-  display: flex;
-  flex-wrap: wrap;
-  // grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 
   &__content {
     box-shadow: 1px 2px 3px 1px var(--elements);
     border: 1px var(--alpha) solid;
     border-radius: 5rem;
-    // margin-bottom: 20rem;
   }
 
   &__image {

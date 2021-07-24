@@ -30,19 +30,16 @@
 
             <div class="hero__wrap">       
                 <h1>Python(Django) Developer</h1>
-                <p>Software Engineering challenges the way we think in order to solve problems, using tools, previous knowledge and
-                documentation available to us. The possibilities with Software are pretty much endless.<br>
+                <p>Hi, I'm a Software Engineer with a passion for building things that are useful to people and also easy to use. I appreciate 
+                    that technology enables me to bring an idea to life whilst also supporting my desire to learn and grow. 
+                    <br>
                 <br>
-                The freedom as well as it’s challenges are what excite me and encourage me to continue learning.</p>
+                I love being able to make a change and thoroughly enjoy solving problems. </p>
                 <div class="container">
                     <div class="container__options">
                         <div class="container__wrap">
-                            <picture class="container__picture">
-                                <source srcset="portfolio_project\static\portfolio_project\images\Cloud.svg" media="(min-width: 700px)">
-                                <source srcset="portfolio_project\static\portfolio_project\images\cloud-small.svg">
-                                <img src="portfolio_project\static\portfolio_project\images\cloud-small.svg" alt="">
-                            </picture>
-                                <div class="container__name">Tool Stack</div>
+ 
+                                <div class="container__name">My Tool Stack and Experience</div>
                                 <ul class="container__list">
                                     <li><a href="">Python</a></li>
                                     <li><a href="">Django</a></li>
@@ -118,21 +115,27 @@
         </ul>
     </nav>
 
-    <div class="hero2">
+    <!-- <div class="hero2">
         <h1>Contact form</h1>
         <div class="form">
             <div class="form__group">
-                <!-- <label class="form_label"> -->
-                <!-- <input class="form__field" method="POST"> -->
+                <label class="form__label">
+                <input class="form__field" method="POST">
                     {% csrf_token %}
-                    {{ form.as_p|crispy }}
+                    {{ form|crispy }}
                     <button class="form__button" type="submit">Submit</button>
-                <!-- </input> -->
-                <!-- </label> -->
+                </input>
+                </label>
             </div>
         </div>
     </div>
-    
+     -->
+
+        <form class="form" method="POST" >
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input class="form__button" type="submit" value="Send Message"></input>
+        </form>
 
 
 <footer class="footer">COPYRIGHT &copy; fulodev 2020</footer>

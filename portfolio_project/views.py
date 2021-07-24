@@ -21,20 +21,20 @@ def home_page(request):
         if form.is_valid():
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
-            from_email = form.cleaned_data['from_email']
+            email = form.cleaned_data['email']
 
             data = {
                     'subject':subject,
                     'message': message,
-                    'from_email': from_email
+                    'email': email,
             }
-            message = """ New message: {}  From: {}""". format(data['message'], data['from_email'])
+            message = """ New message: {}  From: {}""". format(data['message'], data['email'])
 
             try:
                 send_mail(data['subject'], message, '', ['fulonline1@gmail.com'])
+                messages.info(request, "Thank you, your message has been submitted. I will get back to you shortly.")
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            messages.info(request, "Thank you, your message has been submitted. I will get back to you shortly.")
             return redirect('/')
                
     context = {'projects': projects, 'form':form }
