@@ -480,8 +480,16 @@ h1 {
 .nav__option1 {
   color: var(--delta);
 }
+.nav__option1:hover {
+  font-weight: bold;
+  color: var(--light);
+}
 .nav__option2 {
   color: var(--delta);
+}
+.nav__option2:hover {
+  font-weight: bold;
+  color: var(--light);
 }
 @media (min-width: 767px) {
   .nav__logo {
@@ -527,7 +535,15 @@ h1 {
   color: var(--alpha);
   white-space: nowrap;
 }
+.nav1__option1:hover {
+  font-weight: bold;
+  color: var(--alpha);
+}
 .nav1__option2 {
+  color: var(--alpha);
+}
+.nav1__option2:hover {
+  font-weight: bold;
   color: var(--alpha);
 }
 .nav1__github {
@@ -541,8 +557,12 @@ h1 {
 }
 .nav1__githublogo {
   color: var(--alpha);
-  font-size: 18rem;
+  font-size: 26rem;
   display: flex;
+}
+.nav1__githublogo:hover {
+  color: var(--alpha);
+  font-weight: bold;
 }
 @media (min-width: 767px) {
   .nav1__logo {
@@ -608,50 +628,17 @@ h1 {
   line-height: 30rem;
   margin-bottom: 15rem;
 }
-.hero1 p {
-  font-size: 18rem;
-  text-align: center;
-  line-height: 1.5;
-  margin-bottom: 0;
-  padding: 8rem;
-}
-.hero1 h2 {
-  font-size: 22rem;
-  text-align: center;
-  line-height: 30rem;
-  margin-top: 0;
-  text-align: center;
-}
-.hero1__links {
-  display: flex;
-  display: grid;
-  justify-content: space-between;
-  -webkit-text-decoration-color: var(--alpha);
-          text-decoration-color: var(--alpha);
-}
 @media (min-width: 767px) {
   .hero1 {
     display: grid;
-    display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .hero1 h2 {
-    font-size: 38rem;
-    line-height: 40rem;
-    display: grid;
-    text-align: center;
-    padding: 5rem;
-  }
-  .hero1 p {
-    font-size: 28rem;
-    line-height: 50rem;
-    padding: 10rem;
   }
   .hero1 h1 {
     text-align: center;
     padding: 10rem;
     vertical-align: top;
+    font-size: 34rem;
   }
 }
 
@@ -701,8 +688,13 @@ h1 {
   background-color: var(--alert);
   color: var(--delta);
   padding: 12rem;
-  font-size: 13rem;
+  font-size: 15rem;
   text-align: center;
+}
+@media (min-width: 767px) {
+  .footer {
+    font-size: 20rem;
+  }
 }
 
 .nav2 {
@@ -737,8 +729,16 @@ h1 {
   color: var(--delta);
   white-space: nowrap;
 }
+.nav2__option1:hover {
+  color: var(--delta);
+  font-weight: bold;
+}
 .nav2__option2 {
   color: var(--delta);
+}
+.nav2__option2:hover {
+  color: var(--delta);
+  font-weight: bold;
 }
 @media (min-width: 767px) {
   .nav2__logo {
@@ -784,6 +784,9 @@ h1 {
 .form control-group {
   margin-bottom: 100rem;
 }
+.form__title {
+  font-size: 20rem;
+}
 .form form {
   border-radius: 10rem;
 }
@@ -802,6 +805,13 @@ h1 {
     padding: 15rem;
   }
 }
+.form__title {
+  font-size: 32rem;
+}
+.form__message {
+  line-height: 30rem;
+  padding: 40rem;
+}
 
 .paginate {
   display: flex;
@@ -815,11 +825,13 @@ h1 {
   max-width: 895rem;
   display: grid;
   gap: 20px;
+  background-color: var(--delta);
 }
 .card__content {
   box-shadow: 1px 2px 3px 1px var(--elements);
   border: 1px var(--alpha) solid;
   border-radius: 5rem;
+  background: var(--alert);
 }
 .card__image {
   width: 100%;
@@ -829,25 +841,29 @@ h1 {
 }
 .card__text {
   display: grid;
-  line-height: 5;
-  font-size: 0.9em;
-  background: var(--delta);
-  justify-content: space-between;
   -webkit-text-decoration-color: none;
           text-decoration-color: none;
-  text-align: center;
+  color: var(--delta);
 }
 .card h2 {
   margin-top: 10rem;
-  font-size: 23rem;
+  font-size: 24rem;
+  font-weight: bold;
   display: block;
   text-align: center;
 }
-.card p {
-  margin-bottom: 0;
-  font-size: 18rem;
-  line-height: 1.5;
+.card h3 {
+  margin-top: 10rem;
+  font-size: 22rem;
+  display: block;
   text-align: center;
+  padding: 5rem;
+}
+.card p {
+  font-size: 18rem;
+  text-align: center;
+  padding: 5rem;
+  margin-bottom: 5rem;
 }
 .card a {
   text-align: center;
@@ -856,12 +872,13 @@ h1 {
   padding: 15px;
   border-bottom: 2px solid var(--alpha);
   border-top: 2px solid var(--alpha);
-  background: var(--delta);
+  background: var(--alert);
 }
 .card__link {
   text-decoration: none;
   display: grid;
   margin: right;
+  color: var(--delta);
 }
 .card__link:hover {
   text-decoration: underline;
@@ -869,22 +886,16 @@ h1 {
 }
 @media (min-width: 767px) {
   .card {
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    grid-column-gap: 5rem;
     display: grid;
-    padding: 20px;
-  }
-  .card__content {
-    justify-content: space-between;
-    float: left;
-  }
-  .card h2 {
-    text-align: center;
+    margin: 10rem auto;
+    grid-template-columns: 50% 50%;
+    align-items: stretch;
   }
 }
 
 .posting {
   display: grid;
+  margin: 30rem 10rem;
 }
 .posting img {
   width: 100%;
@@ -908,6 +919,10 @@ h1 {
   background-color: var(--light);
 }
 @media (min-width: 767px) {
+  .posting {
+    margin: 30rem auto;
+    max-width: 1000rem;
+  }
   .posting__top {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -917,5 +932,23 @@ h1 {
     display: block;
     border-radius: 5rem;
     size: cover;
+  }
+  .posting__main {
+    padding: 40rem;
+  }
+  .posting h1 {
+    text-align: center;
+    font-size: 50rem;
+    padding: 15rem;
+  }
+  .posting h2 {
+    text-align: center;
+    font-size: 30rem;
+    padding: 10rem;
+  }
+  .posting p {
+    font-size: 25rem;
+    padding: 8rem;
+    background-color: var(--light);
   }
 }/*# sourceMappingURL=main.css.map */

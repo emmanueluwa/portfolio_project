@@ -2,12 +2,10 @@
   background-color: var(--alert);
   color: var(--delta);
   padding: 12rem;
-  font-size: 13rem;
+  font-size: 15rem;
   text-align: center;
 
-  // @include respond-to("small") {
-  //   footer {
-  //     font-size: 100rem;
-  //   }
-  // }
+  @include respond-to("small") {
+    font-size: 20rem;
+  }
 }

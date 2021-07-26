@@ -12,6 +12,10 @@
     margin-bottom: 100rem;
   }
 
+  &__title {
+    font-size: 20rem;
+  }
+
   form {
     border-radius: 10rem;
   }
@@ -28,5 +32,14 @@
     font-size: 28rem;
     line-height: 60rem;
     padding: 15rem;
+  }
+
+  &__title {
+    font-size: 32rem;
+  }
+
+  &__message {
+    line-height: 30rem;
+    padding: 40rem;
   }
 }

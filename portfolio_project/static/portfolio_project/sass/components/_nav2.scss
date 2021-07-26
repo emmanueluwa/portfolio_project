@@ -35,8 +35,18 @@
     white-space: nowrap;
   }
 
+  &__option1:hover {
+    color: var(--delta);
+    font-weight: bold;
+  }
+
   &__option2 {
     color: var(--delta);
+  }
+
+  &__option2:hover {
+    color: var(--delta);
+    font-weight: bold;
   }
 
   @include respond-to("small") {

@@ -3,11 +3,13 @@
   max-width: 895rem;
   display: grid;
   gap: 20px;
+  background-color: var(--delta);
 
   &__content {
     box-shadow: 1px 2px 3px 1px var(--elements);
     border: 1px var(--alpha) solid;
     border-radius: 5rem;
+    background: var(--alert);
   }
 
   &__image {
@@ -19,27 +21,31 @@
 
   &__text {
     display: grid;
-    line-height: 5;
-    font-size: 0.9em;
-    // padding: 15px;
-    background: var(--delta);
-    justify-content: space-between;
     text-decoration-color: none;
-    text-align: center;
+    color: var(--delta);
   }
 
   h2 {
     margin-top: 10rem;
-    font-size: 23rem;
+    font-size: 24rem;
+    font-weight: bold;
     display: block;
     text-align: center;
   }
 
-  p {
-    margin-bottom: 0;
-    font-size: 18rem;
-    line-height: 1.5;
+  h3 {
+    margin-top: 10rem;
+    font-size: 22rem;
+    display: block;
     text-align: center;
+    padding: 5rem;
+  }
+
+  p {
+    font-size: 18rem;
+    text-align: center;
+    padding: 5rem;
+    margin-bottom: 5rem;
   }
 
   a {
@@ -50,13 +56,14 @@
     padding: 15px;
     border-bottom: 2px solid var(--alpha);
     border-top: 2px solid var(--alpha);
-    background: var(--delta);
+    background: var(--alert);
   }
 
   &__link {
     text-decoration: none;
     display: grid;
     margin: right;
+    color: var(--delta);
   }
 
   &__link:hover {
@@ -65,30 +72,9 @@
   }
 
   @include respond-to("small") {
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    grid-column-gap: 5rem;
-    // display: flex;
     display: grid;
-    padding: 20px;
-
-    &__content {
-      justify-content: space-between;
-      float: left;
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    // &__imagebox {
-    //   width: 100%;
-    //   height: 100%;
-    // }
-
-    // &__image {
-    //   height: 100%;
-    //   width: 100%;
-    //   object-fit: cover;
-    // }
+    margin: 10rem auto;
+    grid-template-columns: 50% 50%;
+    align-items: stretch;
   }
 }

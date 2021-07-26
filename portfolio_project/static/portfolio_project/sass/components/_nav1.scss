@@ -35,7 +35,17 @@
     white-space: nowrap;
   }
 
+  &__option1:hover {
+    font-weight: bold;
+    color: var(--alpha);
+  }
+
   &__option2 {
+    color: var(--alpha);
+  }
+
+  &__option2:hover {
+    font-weight: bold;
     color: var(--alpha);
   }
 
@@ -51,8 +61,13 @@
   }
   &__githublogo {
     color: var(--alpha);
-    font-size: 18rem;
+    font-size: 26rem;
     display: flex;
+  }
+
+  &__githublogo:hover {
+    color: var(--alpha);
+    font-weight: bold;
   }
 
   @include respond-to("small") {

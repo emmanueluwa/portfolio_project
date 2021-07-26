@@ -2,9 +2,6 @@
   padding: 10rem;
   background-color: var(--alert);
 
-  // max-width: 895rem;
-  // margin: 10rem auto;
-
   h1 {
     font-size: 26rem;
     text-align: center;
@@ -13,46 +10,8 @@
     margin-bottom: 15rem;
   }
 
-  p {
-    font-size: 18rem;
-    text-align: center;
-    line-height: 1.5;
-    margin-bottom: 0;
-    padding: 8rem;
-  }
-
-  h2 {
-    font-size: 22rem;
-    text-align: center;
-    line-height: 30rem;
-    margin-top: 0;
-    text-align: center;
-  }
-
-  &__links {
-    display: flex;
-    display: grid;
-    justify-content: space-between;
-    text-decoration-color: var(--alpha);
-  }
-
   @include respond-to("small") {
-    h2 {
-      font-size: 38rem;
-      line-height: 40rem;
-      display: grid;
-      text-align: center;
-      padding: 5rem;
-    }
-
-    p {
-      font-size: 28rem;
-      line-height: 50rem;
-      padding: 10rem;
-    }
-
     display: grid;
-    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -60,6 +19,7 @@
       text-align: center;
       padding: 10rem;
       vertical-align: top;
+      font-size: 34rem;
     }
   }
 }

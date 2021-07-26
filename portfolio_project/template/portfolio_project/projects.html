@@ -28,42 +28,34 @@
 
     <div class="hero1">
         <h1>Projects</h1>
-        {% for project in projects %}
-        <div class="card">
-            <div class="card__content">
-                <div class="card__imagebox">
-                    <img src="{{ project.thumbnail.url }}" alt="" class="card__image">
-                </div>
-                <div class="card__text">
-         
-                    
-                    <h2 class="card__title">{{ project.title }}</h2>
-                    <p class="card__description">{{ project.description }}</p>
-                    <p class="card__body">{{ project.body|truncatewords:20 }}</p>
-
-                </div>
-                <div class="card__info">
-                    <div>
-                        <a href="{% url 'portfolio_project:post' project.id %}" class="card__link">See more</a>
-                    </div>
-        
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-     
     </div>
 
-    <nav class="nav1">
-        <section>
-        <ul class="nav1__github">
-            <li class="nav1__githublogo"><a href="https://github.com/emmanueluwa">Github</a></li>
-        </ul>
-        </section>
-    </nav>
-
+        <div class="card">
+        {% for project in projects %}
+            <div class="card__items">
+                <div class="card__content">
+                    <div class="card__imagebox">
+                        <img src="{{ project.thumbnail.url }}" alt="" class="card__image">
+                    </div>
+                    <div class="card__text">
+                        <h2 class="card__title">{{ project.title }}</h2>
+                        <h3 class="card__description">{{ project.description }}</h3>
+                        <p class="card__body">{{ project.body|truncatewords:20 }}</p>
+                    </div>
+                    <div class="card__info">
+                        <div>
+                            <a href="{% url 'portfolio_project:post' project.id %}" class="card__link">See more</a>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
      
 
+  
+<footer class="footer">COPYRIGHT &copy; fulodev 2021</footer>
 </body>
 </html>
 

@@ -70,33 +70,39 @@
 
     <div class="hero1">
             <h1>Projects</h1> 
-                {% for project in projects %}
+    </div>
 
             <div class="card">
-                <div class="card__content">
-                    <div class="card__imagebox">
-                        <img src="{{ project.thumbnail.url }}" alt="" class="card__image">
-                    </div>
-                    <div class="card__text">
-                       
-                        <h2 class="card__title">{{ project.title }}</h2>
-                        <p class="card__description">{{ project.description }}</p>
-                     
-                    </div>
-                    <div class="card__info">
-                        <div>
-                            <a href="{% url 'portfolio_project:post' project.id %}" class="card__link">See more</a>
+                {% for project in projects %}
+
+                <div class="card__items">
+
+                    <div class="card__content">
+                        <div class="card__imagebox">
+                            <img src="{{ project.thumbnail.url }}" alt="" class="card__image">
+                        </div>
+                        <div class="card__text">
+                        
+                            <h2 class="card__title">{{ project.title }}</h2>
+                            <p class="card__description">{{ project.description }}</p>
+                        
+                        </div>
+                        <div class="card__info">
+                            <div>
+                                <a href="{% url 'portfolio_project:post' project.id %}" class="card__link">See more</a>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
                 {% endfor %}
 
-    </div>
+            </div>
+
 
     <nav class="nav1">
         <ul class="nav1__lblock">
-            <li class="nav1__logo"><a href="https://github.com/emmanueluwa">Github</a></li>
+            <li class="nav1__githublogo"><a href="https://github.com/emmanueluwa">Github</a></li>
         </ul>
         <ul class="nav1__options">
             <li class="nav1__option2"><a href="/projects">Projects</a></li>
@@ -115,30 +121,21 @@
         </ul>
     </nav>
 
-    <!-- <div class="hero2">
-        <h1>Contact form</h1>
-        <div class="form">
-            <div class="form__group">
-                <label class="form__label">
-                <input class="form__field" method="POST">
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <button class="form__button" type="submit">Submit</button>
-                </input>
-                </label>
-            </div>
-        </div>
-    </div>
-     -->
+
 
         <form class="form" method="POST" >
+            <h1 class="form__title">Contact Form</h1>
+            <h2 class="form__message">To get in touch with me, please fill in the form below
+                and I will get back to you. <br> Thank you for your time!
+            </h2>
+
             {% csrf_token %}
             {{ form|crispy }}
             <input class="form__button" type="submit" value="Send Message"></input>
         </form>
 
 
-<footer class="footer">COPYRIGHT &copy; fulodev 2020</footer>
+<footer class="footer">COPYRIGHT &copy; fulodev 2021</footer>
 </body>
 </html>
 
