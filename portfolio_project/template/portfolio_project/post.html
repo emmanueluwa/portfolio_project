@@ -21,7 +21,7 @@
       </ul>
       <ul class="nav1__options">
         <li class="nav1__option1"><a href="/">About Me</a></li>
-        <li class="nav1__option2"><a href="">Contact</a></li>
+        <li class="nav1__option2"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -38,6 +38,7 @@
 
     <div class="posting__main">
       <p class="posting__body">{{ post.body|safe }}</p>
+      <a href="{{ post.link }}"></a>
     </div>
   </div>
 
