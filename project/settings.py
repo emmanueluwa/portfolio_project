@@ -48,10 +48,12 @@ INSTALLED_APPS = [
     'django_sass',
     'ckeditor',
     'crispy_forms',
+    'ckeditor_uploader',
 
 ]
 
 CRISPY_FORMS_PACK = 'bootstrap4'
+CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware' ,

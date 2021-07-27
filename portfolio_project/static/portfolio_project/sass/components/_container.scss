@@ -8,12 +8,15 @@
     color: var(--delta);
     font-size: 26rem;
     text-decoration: underline;
+    margin-top: 35rem;
   }
 
   &__list {
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 10rem;
+    margin-top: 25rem;
+    margin-bottom: 50rem;
   }
 
   li {
