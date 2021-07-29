@@ -23,6 +23,7 @@
     padding: 12rem;
     li {
       margin-left: 15rem;
+      font-size: 20rem;
     }
   }
 
@@ -42,6 +43,9 @@
 
   &__option2 {
     color: var(--alpha);
+    li {
+      font-size: 20rem;
+    }
   }
 
   &__option2:hover {
@@ -54,14 +58,10 @@
     display: flex;
     padding: 15rem;
     text-align: center;
-
-    li {
-      font-size: 24rem;
-    }
   }
   &__githublogo {
     color: var(--alpha);
-    font-size: 26rem;
+    font-size: 24rem;
     display: flex;
   }
 

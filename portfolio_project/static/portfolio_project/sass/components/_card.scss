@@ -1,5 +1,5 @@
 .card {
-  margin: 30rem 20rem;
+  margin: 30rem 10rem;
   max-width: 895rem;
   display: grid;
   gap: 20px;
@@ -74,6 +74,7 @@
   @include respond-to("small") {
     display: grid;
     margin: 10rem auto;
+    max-width: 1000rem;
     grid-template-columns: 50% 50%;
     align-items: stretch;
   }

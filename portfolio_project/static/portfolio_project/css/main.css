@@ -10,10 +10,6 @@
   --skills: #e1e1e1;
 }
 
-@font-face {
-  font-family: "Indie Flower";
-  src: url(../../fonts/IndieFlower-Regular.ttf);
-}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -473,6 +469,7 @@ h1 {
 }
 .nav__options li {
   margin-left: 15rem;
+  font-size: 20rem;
 }
 .nav__logo {
   color: var(--delta);
@@ -527,6 +524,7 @@ h1 {
 }
 .nav1__options li {
   margin-left: 15rem;
+  font-size: 20rem;
 }
 .nav1__logo {
   color: var(--alpha);
@@ -542,6 +540,9 @@ h1 {
 .nav1__option2 {
   color: var(--alpha);
 }
+.nav1__option2 li {
+  font-size: 20rem;
+}
 .nav1__option2:hover {
   font-weight: bold;
   color: var(--alpha);
@@ -552,12 +553,9 @@ h1 {
   padding: 15rem;
   text-align: center;
 }
-.nav1__github li {
-  font-size: 24rem;
-}
 .nav1__githublogo {
   color: var(--alpha);
-  font-size: 26rem;
+  font-size: 24rem;
   display: flex;
 }
 .nav1__githublogo:hover {
@@ -578,12 +576,7 @@ h1 {
 
 .hero {
   padding: 10rem;
-}
-.hero--bgimg {
-  background-image: url("../../images/hero-img-small.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
+  background-color: var(--beta);
 }
 .hero h1 {
   font-size: 26rem;
@@ -603,9 +596,6 @@ h1 {
   .hero__wrap {
     max-width: 895rem;
     margin: 10rem auto;
-  }
-  .hero--bgimg {
-    background-image: url("../../images/hero-img-big.svg");
   }
   .hero h1 {
     font-size: 38rem;
@@ -700,6 +690,21 @@ h1 {
   }
 }
 
+.footer1 {
+  background-color: var(--alert);
+  color: var(--delta);
+  padding: 12rem;
+  font-size: 15rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+@media (min-width: 767px) {
+  .footer1 {
+    font-size: 20rem;
+  }
+}
+
 .nav2 {
   display: grid;
   grid-template-columns: 1fr 1fr -webkit-min-content;
@@ -724,6 +729,7 @@ h1 {
 }
 .nav2__options li {
   margin-left: 15rem;
+  font-size: 20rem;
 }
 .nav2__logo {
   color: var(--delta);
@@ -824,7 +830,7 @@ h1 {
 }
 
 .card {
-  margin: 30rem 20rem;
+  margin: 30rem 10rem;
   max-width: 895rem;
   display: grid;
   gap: 20px;
@@ -891,6 +897,7 @@ h1 {
   .card {
     display: grid;
     margin: 10rem auto;
+    max-width: 1000rem;
     grid-template-columns: 50% 50%;
     align-items: stretch;
   }
