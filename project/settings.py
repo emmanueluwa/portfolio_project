@@ -27,7 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=moczgv@gkoq-g-k(98%lrs!3t$*568f0bn!1-pniw%be51ki9'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -144,14 +144,18 @@ USE_TZ = True
 
 ###################  for development #################
 #route for web browser
-STATIC_URL = '/portfolio_project/static/'
+STATIC_URL = '/static/'
 
 #route for django
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR , 'portfolio_project/static/portfolio_project/' )
+    os.path.join(BASE_DIR , 'portfolio_project/static/portfolio_project' ) #concatenate base directory and static url to string that is a file system path
 ]
 
 MEDIA_URL = '/media/'
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 ######################################################
 
 # VENV_PATH =os.path.dirname(BASE_DIR)
