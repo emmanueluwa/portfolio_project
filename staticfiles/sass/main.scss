@@ -1,0 +1,27 @@
+// VARIABLES
+@import "variables/_colours.scss";
+
+// UTILITIES
+@import "utilities/_fonts.scss";
+
+// RESETS
+@import "resets/_normalize.scss";
+@import "resets/_reset.local.scss";
+@import "resets/_responsive.scss";
+@import "resets/_typography.scss";
+@import "resets/_placeholder.scss";
+
+// COMPONENTS
+@import "components/_nav.scss";
+@import "components/_nav1.scss";
+@import "components/_hero.scss";
+@import "components/_hero1.scss";
+@import "components/_container.scss";
+@import "components/_footer.scss";
+@import "components/_footer1.scss";
+@import "components/_nav2.scss";
+@import "components/_hero2.scss";
+@import "components/_form.scss";
+@import "components/_paginate.scss";
+@import "components/_card.scss";
+@import "components/_posting.scss";

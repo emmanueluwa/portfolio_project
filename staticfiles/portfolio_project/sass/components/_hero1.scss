@@ -1,0 +1,25 @@
+.hero1 {
+  padding: 10rem;
+  background-color: var(--alert);
+
+  h1 {
+    font-size: 26rem;
+    text-align: center;
+    color: var(--alpha);
+    line-height: 30rem;
+    margin-bottom: 15rem;
+  }
+
+  @include respond-to("small") {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      text-align: center;
+      padding: 10rem;
+      vertical-align: top;
+      font-size: 34rem;
+    }
+  }
+}

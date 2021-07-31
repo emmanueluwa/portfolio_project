@@ -1,0 +1,63 @@
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr min-content;
+  grid-template-rows: repeat(2, min-content);
+
+  &__lblock {
+    grid-row: 1/2;
+    grid-column: 1/2;
+
+    display: flex;
+    align-items: center;
+    padding: 12rem;
+  }
+
+  &__options {
+    grid-row: 1/2;
+    grid-column: 3/4;
+
+    display: flex;
+    align-items: center;
+    padding: 12rem;
+    li {
+      margin-left: 15rem;
+      font-size: 20rem;
+    }
+  }
+
+  &__logo {
+    color: var(--delta);
+  }
+
+  &__option1 {
+    color: var(--delta);
+  }
+
+  &__option1:hover {
+    font-weight: bold;
+    color: var(--light);
+  }
+
+  &__option2 {
+    color: var(--delta);
+  }
+
+  &__option2:hover {
+    font-weight: bold;
+    color: var(--light);
+  }
+
+  @include respond-to("small") {
+    &__logo {
+      font-size: 26rem;
+    }
+
+    &__option1 {
+      font-size: 26rem;
+    }
+
+    &__option2 {
+      font-size: 26rem;
+    }
+  }
+}

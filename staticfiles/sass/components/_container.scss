@@ -1,0 +1,51 @@
+.container {
+  max-width: 600rem;
+  margin: 10rem auto;
+
+  &__name {
+    text-align: center;
+
+    color: var(--delta);
+    font-size: 26rem;
+    text-decoration: underline;
+    margin-top: 35rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10rem;
+    margin-top: 25rem;
+    margin-bottom: 50rem;
+  }
+
+  li {
+    font-size: 17rem;
+    color: var(--beta);
+    text-align: center;
+    display: inline-block;
+    border-radius: 5rem;
+    background-color: var(--delta);
+    margin: 2px;
+    padding: 2px 5px;
+  }
+
+  @include respond-to("small") {
+    &__name {
+      font-size: 35rem;
+      margin-top: 70rem;
+    }
+
+    li {
+      font-size: 35rem;
+      padding: 10rem;
+      margin: 8rem;
+      align-items: center;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.footer {
+  background-color: var(--alert);
+  color: var(--delta);
+  padding: 12rem;
+  font-size: 15rem;
+  text-align: center;
+
+  @include respond-to("small") {
+    font-size: 20rem;
+  }
+}

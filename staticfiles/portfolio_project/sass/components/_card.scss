@@ -1,0 +1,81 @@
+.card {
+  margin: 30rem 10rem;
+  max-width: 895rem;
+  display: grid;
+  gap: 20px;
+  background-color: var(--delta);
+
+  &__content {
+    box-shadow: 1px 2px 3px 1px var(--elements);
+    border: 1px var(--alpha) solid;
+    border-radius: 5rem;
+    background: var(--alert);
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+    border-radius: 5rem;
+    size: cover;
+  }
+
+  &__text {
+    display: grid;
+    text-decoration-color: none;
+    color: var(--delta);
+  }
+
+  h2 {
+    margin-top: 10rem;
+    font-size: 24rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+  }
+
+  h3 {
+    margin-top: 10rem;
+    font-size: 22rem;
+    display: block;
+    text-align: center;
+    padding: 5rem;
+  }
+
+  p {
+    font-size: 18rem;
+    text-align: center;
+    padding: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  a {
+    text-align: center;
+  }
+
+  &__info {
+    padding: 15px;
+    border-bottom: 2px solid var(--alpha);
+    border-top: 2px solid var(--alpha);
+    background: var(--alert);
+  }
+
+  &__link {
+    text-decoration: none;
+    display: grid;
+    margin: right;
+    color: var(--delta);
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+    color: var(--alpha);
+  }
+
+  @include respond-to("small") {
+    display: grid;
+    margin: 10rem auto;
+    max-width: 1000rem;
+    grid-template-columns: 50% 50%;
+    align-items: stretch;
+  }
+}

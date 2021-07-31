@@ -49,11 +49,12 @@ INSTALLED_APPS = [
     'ckeditor',
     'crispy_forms',
     'ckeditor_uploader',
+    'storages'
 
 ]
 
 CRISPY_FORMS_PACK = 'bootstrap4'
-CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_UPLOAD_PATH = 'media/uploads/'
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware' ,
@@ -145,16 +146,15 @@ USE_TZ = True
 ###################  for development #################
 #route for web browser
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-#route for django
+#route for django #concatenate base directory and static url to string that is a file system path
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR , 'portfolio_project/static/portfolio_project' ) #concatenate base directory and static url to string that is a file system path
+    os.path.join(BASE_DIR , 'portfolio_project/static/portfolio_project' ) 
 ]
 
 MEDIA_URL = '/media/'
-
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 ######################################################
 
@@ -179,9 +179,22 @@ MEDIA_URL = '/media/'
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = "fulonline1@gmail.com"
-EMAIL_HOST_PASSWORD = "dlphwewaaladnlif"
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
  
+
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY= os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+AWS_DEFAULT_ACL = None
+
+AWS_LOCATION = 'staticfiles'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+DEFAULT_FILE_STORAGE = 'project.storages.MediaStore'
+

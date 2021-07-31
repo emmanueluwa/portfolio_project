@@ -1,0 +1,45 @@
+.form {
+  background: var(--gamma);
+  color: var(--delta);
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  font-size: 18rem;
+  padding: 20rem;
+  line-height: 35rem;
+
+  control-group {
+    margin-bottom: 100rem;
+  }
+
+  &__title {
+    font-size: 20rem;
+  }
+
+  form {
+    border-radius: 10rem;
+  }
+  &__button {
+    padding: 10rem;
+    margin-top: 10rem;
+    color: var(--gamma);
+    font-weight: bolder;
+    background-color: var(--light);
+    border-radius: 10rem;
+  }
+
+  @include respond-to("small") {
+    font-size: 28rem;
+    line-height: 60rem;
+    padding: 15rem;
+  }
+
+  &__title {
+    font-size: 32rem;
+  }
+
+  &__message {
+    line-height: 30rem;
+    padding: 40rem;
+  }
+}
