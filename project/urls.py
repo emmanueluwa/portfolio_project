@@ -27,8 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("portfolio_project.urls")),
     path('ckeditor', include('ckeditor_uploader.urls')),
-    path(r'^favicon\.ico$', RedirectView.as_view(url='/static/portfolio_project/icons/favicon.ico')), 
-
+    # path(r'^favicon\.ico$', RedirectView.as_view(url='/static/portfolio_project/icons/favicon.ico')), 
 ]
 
 if settings.DEBUG:
